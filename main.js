@@ -1,11 +1,16 @@
 function arr(nums)
 {
     nums = [];
-    for (let i = 0; i < 10; i++)
+    for (let i = 0; i < 100; i++)
     {
-        nums[i] = Math.floor(Math.random()*10);
+        nums[i] = Math.floor(Math.random()*100);
     }
     return nums;
+}
+
+function num(a,b)
+{
+    return a - b;
 }
 
 function binary(arr)
@@ -17,7 +22,7 @@ function binary(arr)
     let count = 0;
     while (n !== arr[mid])
     {
-            if (n < arr[min] || n > arr[max] || min === mid)
+            if (n < arr[min] || n > arr[max] || min === mid === max)
             {
                 document.getElementById("demo").innerHTML = "Số bạn nhập không có trong mảng";
                 break;
@@ -43,6 +48,6 @@ function binary(arr)
 
 let a = arr();
 console.log(a);
-a.sort();
+a.sort(num);
 console.log(a);
 binary(a);
